@@ -39,13 +39,15 @@ Before you begin, ensure you have met the following requirements:
     For test:
 
     ```bash
+    cd tests/databases
     sqlite3 mytestdatabase.sqlite < setup_test_database_sqlite.sql
     ```
 
     For prod:
     
     ```bash
-    sqlite3 mydatabase.sqlite < setup_test_database_sqlite.sql
+    cd questions/databases
+    sqlite3 mydatabase.sqlite < setup_database_sqlite.sql
     ```
 
     #### RUN TESTS
