@@ -1,0 +1,60 @@
+Question 1
+
+Given two lists - job and status - create a dictionary with the job list as the keys and the status list as the values?
+
+    def create_job_status_dict(job, status):
+        job_status_dict = {}
+        
+        for i,job_id in enumerate(job):
+            if i < len(status):
+                job_status_dict[job_id] = status[i]
+            else:
+                job_status_dict[job_id] = 'missing'
+        return job_status_dict
+
+Question 2
+
+Find all the local maxima of the given list. Local maxima are the numbers greater than its neighbors.
+
+    def find_local_maxima(data):
+            maxima = []
+            n = len(data)
+            for i, item in enumerate(data):
+                left = i - 1
+                right = i + 1
+                if left >= 0 and right < n:
+                    if item > data[left] and item > data[right]:
+                        maxima.append((data[i],i))
+
+            #print values to output
+            for val, position in maxima:
+                print(f'{val} at position {position}')
+                
+            return maxima
+
+Question 3 
+
+Given the following BaseConnection class, write a new class which inherits from the BaseConnection class and overrides the set_timeout() method to set a new default value of 20 for the rs_connection.timeout property
+
+    from horizon.next.connections import RedshiftConnection
+    class BaseConnection:
+        def __init__(self, credentials):
+            self.rs_connection = RedshiftConnection(credentials)
+
+        def set_timeout(self, timeout=10):
+            self.rs_connection.timeout = timeout
+
+
+    class MyDBConnection(BaseConnection):
+        def set_timeout(self, timeout=20):
+            self.rs_connection.timeout = timeout
+
+SQL Questions
+
+Question 1
+
+    `SELECT DISTINCT test_id FROM status WHERE status = FALSE`
+
+Question 2
+
+    `SELECT MIN(date) AS min_date, MAX(date) AS max_date FROM status WHERE test_id = 1 AND status = TRUE;`
