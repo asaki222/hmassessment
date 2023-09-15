@@ -1,6 +1,6 @@
 # HMAssessment Project
 
-Welcome to the my assessment, showcasing comprehensive problem-solving and coding proficiency. This project provides detailed answers to various challenges, accompanied by robust testing and database integration. Dive in to explore the solutions, validate code correctness, and witness a commitment to code quality.
+Hey there! Welcome to my assessment project where I've tackled some interesting coding challenges. I've not only provided solutions but also added some testing to make sure everything works as expected. Feel free to dig in, check out the answers, and see how I've ensured code quality!
 
 [Click here for my answers in a text file](answers.txt)
 
@@ -62,4 +62,10 @@ Before you begin, ensure you have met the following requirements:
     ```bash
     python3
     ```
-    and import the methods you would like to test
+    and import the methods you would like to test(example):
+
+    ```python   
+       from questions.python_questions import create_job_status_dict, find_local_maxima
+       data = [3, 6, 1, 2, 5, 4, 10, 5, 7, 2, 4]
+       find_local_maxima(data)
+    ```

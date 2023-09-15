@@ -38,3 +38,7 @@ class MyDBConnection(BaseConnection):
     def set_timeout(self, timeout=20):
         self.rs_connection.timeout = timeout
 
+credentials = {'username': 'user1', 'password': 'pass1'}
+my_db_conn = MyDBConnection(credentials)
+my_db_conn.set_timeout()
+print(my_db_conn.rs_connection.timeout)

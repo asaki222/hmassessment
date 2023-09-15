@@ -1,2 +1,2 @@
-.pycache
-.sqlite
+**/__pycache__/
+**/*.sqlite

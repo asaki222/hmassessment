@@ -27,7 +27,3 @@ def get_min_max_date_for_test_id_and_status(connection,test_id,status):
     finally:
         cursor.close()
         conn.close()
-
-# connection = './databases/mydatabase.sqlite'
-# print(get_test_ids_by_status(connection, False))
-# print(get_min_max_date_for_test_id_and_status(connection, 1, True))
